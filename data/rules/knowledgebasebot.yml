@@ -1,0 +1,7 @@
+version: "2.0"
+
+rules:
+  - rule: query knowledge base
+    steps:
+      - intent: query_knowledge_base
+      - action: action_query_knowledge_base

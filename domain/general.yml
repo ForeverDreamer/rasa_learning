@@ -1,0 +1,38 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - stop
+  - thankyou
+  - bot_challenge
+  - hello_world
+
+responses:
+  utter_greet:
+    - text: "Hello! I am restaurant search assistant! How can I help?"
+    - text: "Hey!"
+    - text: "Hello! How can I help you?"
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Goodbye. See you soon."
+  utter_noworries:
+    - text: "You are welcome :)"
+  utter_chitchat:
+    - text: "chitchat"
+  utter_default:
+    - text: "Sorry, I didn't understand you, please try input something else"
+  utter_restart:
+    - text: "restarted"
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+
+actions:
+- action_hello_world
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true

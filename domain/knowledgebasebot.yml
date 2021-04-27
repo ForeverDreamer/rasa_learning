@@ -1,0 +1,44 @@
+version: "2.0"
+
+intents:
+  - query_knowledge_base
+
+entities:
+  - object_type
+  - mention
+  - attribute
+  - hotel
+  - restaurant
+  - cuisine
+  - city
+
+slots:
+  object_type:
+    type: text
+    influence_conversation: false
+  mention:
+    type: text
+    influence_conversation: false
+  attribute:
+    type: text
+    influence_conversation: false
+  hotel:
+    type: text
+    influence_conversation: false
+  restaurant:
+    type: text
+    influence_conversation: false
+  city:
+    type: text
+    influence_conversation: false
+  cuisine:
+    type: text
+    influence_conversation: false
+
+actions:
+- action_query_knowledge_base
+
+responses:
+  utter_ask_rephrase:
+  - text: "Sorry, I'm not sure I understand. Can you rephrase?"
+  - text: "Can you please rephrase? I did not got that."

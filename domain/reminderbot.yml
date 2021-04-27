@@ -1,0 +1,25 @@
+version: "2.0"
+
+intents:
+- ask_remind_call
+- ask_forget_reminders
+- ask_id
+- EXTERNAL_dry_plant
+- EXTERNAL_reminder
+- EXT_reminder
+
+entities:
+- PERSON
+- plant
+
+slots:
+  PERSON:
+    type: text
+    influence_conversation: false
+
+actions:
+- action_set_reminder
+- action_forget_reminders
+- action_react_to_reminder
+- action_tell_id
+- action_warn_dry
